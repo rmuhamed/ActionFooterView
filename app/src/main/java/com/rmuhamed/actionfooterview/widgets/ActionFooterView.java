@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
-import com.rmuhamed.actionfooterview.listeners.ActionListener;
+import com.rmuhamed.actionfooterview.listeners.AbstractAction;
 
 import java.util.List;
 import java.util.Locale;
@@ -14,14 +14,14 @@ import java.util.Locale;
  */
 public class ActionFooterView extends LinearLayout {
 
-    private List<ActionListener> actionListeners;
+    private List<AbstractAction> actionListeners;
 
-    public ActionFooterView(Context context, List<ActionListener> listeners) {
+    public ActionFooterView(Context context, List<AbstractAction> listeners) {
         super(context);
 
         this.actionListeners = listeners;
 
-        this.addChildViews(context, 4);
+        this.addChildViews(context, 3);
     }
 
     public ActionFooterView(Context context, AttributeSet attrs, int numberOfViews) {

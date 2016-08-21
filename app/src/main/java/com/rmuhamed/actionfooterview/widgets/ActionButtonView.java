@@ -4,23 +4,23 @@ import android.content.Context;
 import android.view.View;
 import android.widget.Button;
 
-import com.rmuhamed.actionfooterview.listeners.ActionListener;
+import com.rmuhamed.actionfooterview.listeners.AbstractAction;
 
 /**
  * Created by rmuhamed on sábado.
  */
 public class ActionButtonView extends Button implements View.OnClickListener {
-    private final ActionListener actionListener;
+    private final AbstractAction abstractAction;
 
-    public ActionButtonView(Context context, ActionListener listener) {
+    public ActionButtonView(Context context, AbstractAction listener) {
         super(context);
-        this.actionListener = listener;
+        this.abstractAction = listener;
 
         this.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        this.actionListener.performAction();
+        this.abstractAction.performAction();
     }
 }

@@ -20,5 +20,7 @@ public class MockViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
 
         ButterKnife.bind(itemView);
+
+        this.label = (TextView) itemView.findViewById(R.id.item_label);
     }
 }

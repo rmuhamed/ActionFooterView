@@ -10,6 +10,7 @@ import com.rmuhamed.actionfooterview.R;
 import com.rmuhamed.actionfooterview.listeners.AbstractAction;
 import com.rmuhamed.actionfooterview.model.MockObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,6 +24,7 @@ public class MockAdapter extends RecyclerView.Adapter<MockViewHolder> {
 
     public MockAdapter(List<MockObject> items) {
         this.items = items;
+        this.actions = new ArrayList<>();
     }
 
     @Override
@@ -46,7 +48,6 @@ public class MockAdapter extends RecyclerView.Adapter<MockViewHolder> {
     public void doUpdate() {
         Log.d(LOG_TAG, "UPDATE ACTION");
     }
-
 
     public void doDelete() {
         Log.d(LOG_TAG, "DELETE ACTION");

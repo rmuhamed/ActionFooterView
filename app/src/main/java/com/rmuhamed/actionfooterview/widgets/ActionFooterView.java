@@ -1,6 +1,7 @@
 package com.rmuhamed.actionfooterview.widgets;
 
 import android.content.Context;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.LinearLayout;
@@ -23,8 +24,8 @@ public class ActionFooterView extends LinearLayout {
     }
 
     private void prepareView(Context context, List<AbstractAction> actions, int childCount) {
+        this.setLayoutParams(new LinearLayoutCompat.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
         this.setOrientation(LinearLayout.HORIZONTAL);
-        this.getLayoutParams().width = LayoutParams.MATCH_PARENT;
 
         this.setGravity(Gravity.CENTER_HORIZONTAL);
 

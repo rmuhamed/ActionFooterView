@@ -19,10 +19,10 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.recycler)
-    private RecyclerView recyclerView;
+    public RecyclerView recyclerView;
 
     @BindView(R.id.root)
-    private LinearLayout rootView;
+    public LinearLayout rootView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
         MockAdapter adapter = new MockAdapter(MockGenerator.generate());
 
-        this.recyclerView = (RecyclerView) this.findViewById(R.id.recycler);
         this.recyclerView.setAdapter(adapter);
         this.recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, true));
 
@@ -41,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         adapter.addObservedEvent(new RemoveAction(adapter));
         adapter.addObservedEvent(new CreateAction(adapter));
 
-        this.rootView = (LinearLayout) this.findViewById(R.id.root);
         this.rootView.addView(new ActionFooterView(this, adapter.getObservedEvents()));
     }
 }

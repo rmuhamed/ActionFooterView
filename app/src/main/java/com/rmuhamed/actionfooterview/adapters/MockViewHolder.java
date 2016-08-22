@@ -19,6 +19,6 @@ public class MockViewHolder extends RecyclerView.ViewHolder {
     public MockViewHolder(View itemView) {
         super(itemView);
 
-        ButterKnife.bind(itemView);
+        ButterKnife.bind(this, itemView);
     }
 }

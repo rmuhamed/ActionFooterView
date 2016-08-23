@@ -7,6 +7,7 @@ import com.rmuhamed.actionfooterview.adapters.MockAdapter;
  */
 public class CreateAction extends AbstractAction {
 
+    // TODO: martes - change parameter type to some kind of "responsible object"
     public CreateAction(MockAdapter adapter) {
         super(adapter);
     }

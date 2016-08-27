@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import com.rmuhamed.actionfooterview.R;
 import com.rmuhamed.actionfooterview.listeners.AbstractAction;
-import com.rmuhamed.actionfooterview.model.MockObject;
+import com.rmuhamed.actionfooterview.utils.Mockup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,10 +19,10 @@ import java.util.List;
 public class MockAdapter extends RecyclerView.Adapter<MockViewHolder> {
     public static final String LOG_TAG = MockAdapter.class.getSimpleName();
 
-    private final List<MockObject> items;
+    private final List<Mockup.MockObject> items;
     private List<AbstractAction> actions;
 
-    public MockAdapter(List<MockObject> items) {
+    public MockAdapter(List<Mockup.MockObject> items) {
         this.items = items;
         this.actions = new ArrayList<>();
     }
@@ -36,7 +36,7 @@ public class MockAdapter extends RecyclerView.Adapter<MockViewHolder> {
 
     @Override
     public void onBindViewHolder(MockViewHolder holder, int position) {
-        MockObject aMockObject = this.items.get(position);
+        Mockup.MockObject aMockObject = this.items.get(position);
         holder.label.setText(aMockObject.getText());
     }
 

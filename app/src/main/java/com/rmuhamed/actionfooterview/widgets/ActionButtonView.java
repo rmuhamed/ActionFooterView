@@ -9,7 +9,7 @@ import com.rmuhamed.actionfooterview.listeners.AbstractAction;
 /**
  * Created by rmuhamed on sábado.
  */
-public class ActionButtonView extends Button implements View.OnClickListener {
+public class ActionButtonView extends ActionView implements View.OnClickListener {
     private final AbstractAction abstractAction;
 
     public ActionButtonView(Context context, AbstractAction listener) {
@@ -21,6 +21,7 @@ public class ActionButtonView extends Button implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+        //"aVisitorObject.visit()"
         this.abstractAction.performAction();
     }
 }

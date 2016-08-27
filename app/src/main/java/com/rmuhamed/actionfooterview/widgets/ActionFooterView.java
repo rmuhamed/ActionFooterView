@@ -35,7 +35,7 @@ public class ActionFooterView extends LinearLayout {
     private void addChildViews(Context c, List<AbstractAction> actions, int n) {
         for (int i = 0; i < n; i++) {
             ActionButtonView b = new ActionButtonView(c, actions.get(i));
-            b.setText(String.format(Locale.getDefault(), "Action %d", i));
+            //b.setText(String.format(Locale.getDefault(), "Action %d", i));
             this.addView(b);
         }
     }

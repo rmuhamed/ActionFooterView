@@ -17,7 +17,7 @@ public class MockObject {
     }
 
     public String getText() {
-        return text;
+        return this.text;
     }
 
     public void setText(String text) {
@@ -25,7 +25,7 @@ public class MockObject {
     }
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(String id) {

@@ -57,6 +57,10 @@ public class MockAdapter extends RecyclerView.Adapter<MockViewHolder> {
         Log.d(LOG_TAG, "CREATE ACTION");
     }
 
+    /**
+     * Kind of "accept" some concrete visitor
+     * @param action
+     */
     public void addObservedEvent(AbstractAction action) {
         this.actions.add(action);
     }

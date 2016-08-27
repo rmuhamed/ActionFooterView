@@ -14,7 +14,7 @@ import butterknife.ButterKnife;
  */
 public class MockViewHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.item_label)
-    public TextView label;
+    TextView label;
 
     public MockViewHolder(View itemView) {
         super(itemView);
